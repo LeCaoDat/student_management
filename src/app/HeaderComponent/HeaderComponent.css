@@ -1,0 +1,43 @@
+.avatar {
+    /*background-color: black; */
+    border-bottom: 1px solid #D8D8D8;
+    height: 300px;
+}
+.avatar img {
+    margin: 0;
+    padding: 0;
+
+    margin-left: 80px;
+    margin-top: 150px;
+    width: 150px;
+    height: 150px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color: #4CAF50;
+}

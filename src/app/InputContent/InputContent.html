@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="column">
+    <div class="ui form">
+      <div class="ui segment">
+        <div class="field notice" *ngIf="temp">
+          <p><b>There was some errors with your submission</b></p>
+          <ul *ngFor="let error of errors" class="subnotice">
+            <li>{{ error }}</li>
+          </ul>
+        </div>
+        <div class="inline fields">
+          <div class="eight wide field">
+            <label>Firstname</label>
+            <input placeholder="Input Firstname" name="firstName" type="text" #newfirstName>
+          </div>
+          <div class="eight wide field">
+            <label>Lastname</label>
+            <input placeholder="Input Lastname" name="lastName" type="text" #newlastName>
+          </div>
+        </div>
+        <!--<div class="ui center aligned grid field">
+                <div class="inline six wide field ">
+                  <label>Day of Birth</label>
+                  <div class="ui calendar" id="example2">
+                    <div class="ui input left icon">
+                      <i class="calendar icon"></i>
+                      <input type="date" placeholder="Date" name="dayOfBirth" #newdayOfBirth>
+                    </div>
+                  </div>
+                </div>
+              </div>-->
+        <br />
+        <div class="ui center aligned grid fields">
+          <div class="inline field ">
+            <label>Day of Birth</label>
+            <select name="day" #newday>
+                    <option *ngFor="let day of days" value="{{ day }}" label="{{ day }}">{{ day }}</option>
+                  </select>
+          </div>
+          <div class="field">
+            <select name="month" #newmonth>
+                    <option *ngFor="let month of months" value="{{ month }}" label="{{ month }}">{{ month }}</option>
+                  </select>
+          </div>
+          <div class="field">
+            <select name="year" #newyear>
+                    <option *ngFor="let year of years" value="{{ year }}" label="{{ year }}">{{ year }}</option>
+                  </select>
+          </div>
+        </div>
+        <br />
+        <div class="inline fields">
+          <div class="eight wide field">
+            <label>Mathematic</label>
+            <input placeholder="Mathematic mark" title="Value from 0.0 to 10.0" min="0.0" max="10.0" name="mathematicMark" type="number"
+              #newmathematicMark>
+          </div>
+          <div class="eight wide field">
+            <label>Physic</label>
+            <input placeholder="Physic mark" title="Value from 0.0 to 10.0" min="0.0" max="10.0" name="physicMark" type="number" #newphysicMark>
+          </div>
+        </div>
+        <br />
+      </div>
+      <div class="ui center aligned grid field">
+        <div (click)="addStudent(newfirstName, newlastName, newday, newmonth, newyear, newmathematicMark, newphysicMark)" class="ui blue submit button ">Insert</div>
+      </div>
+    </div>
+  </div>
+</div>
+<br />

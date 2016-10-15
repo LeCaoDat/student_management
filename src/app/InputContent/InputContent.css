@@ -1,0 +1,12 @@
+.notice {
+    border:1px solid #e0b4b4;
+    background-color: #fff6f6;
+    border-radius: 4px;
+    padding: 10px 10px 10px 10px;
+    color: #9a3f3d;
+    font-size: 17px;
+}
+.subnotice{
+    color: #b15d5b;
+    font-size: 13px;
+}

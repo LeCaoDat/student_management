@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Managerment - Lê Cao Đạt</title>
+    <link rel="stylesheet" href="resources/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/datatable.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/material.css" />
+    <link rel="stylesheet" href="resources/css/icons.css"  />
+    <link href="resources/vendor/semantic.min.css" rel="stylesheet" />
+	  <script src="resources/js/jquery.min.js"></script>
+    <script src="resources/vendor/semantic.min.js"></script>
+    <script src="resources/js/tablesort.js"></script>
+  </head>
+  <body class="body">
+    <app>
+      Loading...
+    </app>
+    <script src="/polyfills.bundle.js"></script>
+    <script src="/vendor.bundle.js"></script>
+    <script src="/main.bundle.js"></script>
+          <script type="text/javascript">
+              $('.ui.form').form({
+                // inline: true,
+                fields: {
+                  firstname: {
+                    identifier  : 'firstName',
+                    rules: [
+                    {
+                      type   : "empty",
+                      prompt : 'Please enter your first name'
+                    }
+                    ]
+                  },
+                  lastname: {
+                    identifier  : 'lastName',
+                    rules: [
+                    {
+                      type   : "empty",
+                      prompt : 'Please enter your last name'
+                    }
+                    ]
+                  },
+                  dob: {
+                    identifier : 'dayOfBirth',
+                    rules: [
+                    {
+                      type   : 'empty',
+                      prompt : 'Please enter a day of birth'
+                    }
+                    ]
+                  },
+                  mathematic: {
+                    identifier : 'mathematicMark',
+                    rules: [
+                    {
+                      type   : 'empty',
+                      prompt : 'Please enter a mathematic mark'
+                    }
+                    ]
+                  },
+                  physic: {
+                    identifier : 'physicMark',
+                    rules: [
+                    {
+                      type   : 'empty',
+                      prompt : 'Please enter a physic mark'
+                    }
+                    ]
+                  },
+                }
+              });
+              $(document).ready(function(){
+                $('.sortable.table').tablesort();
+              });
+          </script>
+  </body>
+</html>
