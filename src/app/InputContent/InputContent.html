@@ -1,5 +1,4 @@
-<div class="row">
-  <div class="column">
+
     <div class="ui form">
       <div class="ui segment">
         <div class="field notice" *ngIf="temp">
@@ -34,18 +33,18 @@
           <div class="inline field ">
             <label>Day of Birth</label>
             <select name="day" #newday>
-                    <option *ngFor="let day of days" value="{{ day }}" label="{{ day }}">{{ day }}</option>
-                  </select>
+              <option *ngFor="let day of days" value="{{ day }}" label="{{ day }}">{{ day }}</option>
+            </select>
           </div>
           <div class="field">
             <select name="month" #newmonth>
-                    <option *ngFor="let month of months" value="{{ month }}" label="{{ month }}">{{ month }}</option>
-                  </select>
+              <option *ngFor="let month of months" value="{{ month }}" label="{{ month }}">{{ month }}</option>
+            </select>
           </div>
           <div class="field">
             <select name="year" #newyear>
-                    <option *ngFor="let year of years" value="{{ year }}" label="{{ year }}">{{ year }}</option>
-                  </select>
+              <option *ngFor="let year of years" value="{{ year }}" label="{{ year }}">{{ year }}</option>
+            </select>
           </div>
         </div>
         <br />
@@ -66,6 +65,5 @@
         <div (click)="addStudent(newfirstName, newlastName, newday, newmonth, newyear, newmathematicMark, newphysicMark)" class="ui blue submit button ">Insert</div>
       </div>
     </div>
-  </div>
-</div>
+
 <br />
